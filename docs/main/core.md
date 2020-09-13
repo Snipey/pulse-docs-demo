@@ -45,7 +45,7 @@ Now we register the core with `App.Core()` which snapshots the core object. It c
 
 See [Creating your core](#core) for the more detailed structure.
 
-::: tip Why export the type?
+:::tip Why export the type?
 We're unable to directly import the core into controllers, as it would create cyclic dependencies which can cause horrible compile issues, especially at scale. This is why we use `App.Core()` to get the core inside controllers, but it still wouldn't be type safe.
 
 However, Typescript types are immune to this paradox and can time travel. :crystal_ball: Once you declare them, they are able to be refrenced in code before and after declaration. This means we can import just the type of the finalized core into our individual controllers.
@@ -123,7 +123,7 @@ Refer to the `examples/react-typescript/src/core` directory on the Pulse repo fo
 
 Create a folder in your application named **_core_**.
 
-::: tip Tip: Using an external core
+:::tip Tip: Using an external core
 In some cases you might want to create your core in a seperate repo or monorepo if you wish to use the same core in multiple projects.
 :::
 
@@ -141,7 +141,7 @@ export const App = new Pulse({
 ```
 
 By this point your core should look something like this:
-::: vue
+:::info
 ├── **core**
 │ ├── **index.ts**
 │ ├── `app.ts`

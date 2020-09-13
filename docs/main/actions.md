@@ -8,7 +8,7 @@ title: Actions
 
 Actions are functions, sometimes literally just functions. However there are some added benifits to using Pulse Actions.
 
-::: tip Where do I put them?
+:::tip Where do I put them?
 Actions are best inside an `actions.ts` file in a **Controller** directory, exported individually.
 
 Then, you can use `import * as actions from './actions'` to register them to a Controller.
@@ -31,7 +31,7 @@ export async function MyAction() {
 ## Wrapped Actions 
 
 ### `App.Action()`
-::: warning
+:::warning
  This feature is not currently functional. It is being worked on currently and should be released in the following few days. Check Discord for updates!
 :::
 This is a wrapper function for actions, it contains a built in try/catch + error handler for cleaner syntax. It also provides helper functions as the first parameter, offsetting custom parameters by one. The second parameter in the declaration would be the first parameter when the action is called. 

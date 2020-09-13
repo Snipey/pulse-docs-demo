@@ -11,7 +11,7 @@ Computed State is an extension of [State](./state.md). It computes a value from 
 - It will magically recompute when its dependencies change.
 - Computed can track dependencies automatically or manually.
 
-::: tip Note: Some State features are disabled
+:::tip Note: Some State features are disabled
 Unlike State you can not directly mutate it, so `.set()`, `.bind` are disabled.
 
 `.persist()` is also blocked as persisting a computed value isn't necessary.
@@ -51,7 +51,7 @@ MY_STATE.set(2);
 MY_COMPUTED.value; // 4
 ```
 
-::: tip How does it work?
+:::tip How does it work?
 The State class has a reactive getter `State.value`. When the computed function begins Pulse will listen for any State instances that have their value accessed, and will register them as a dependency of the Computed State.
 
 This works for Groups, Selectors, Collection Data and anything that extends the State class.

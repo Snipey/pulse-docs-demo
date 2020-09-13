@@ -26,11 +26,11 @@ App.Storage({
 });
 ```
 
-::: tip Note
+:::tip Note
 Currently it is not possible to persist data Collection data. If you need this functionality consider helping design it, join our [Discord](https://discord.gg/KvuJva)
 :::
 
-::: warning React Native & non browser users:
+:::warning React Native & non browser users:
 Some environments, such as React Native, do not have local storage. You must bind a custom storage solution as shown above, in React Native you can use `AsyncStorage`.
 :::
 
