@@ -2,8 +2,6 @@
 title: Persisting Data
 ---
 
-# Persisting Data
-
 It's common for applications to store data on the client browser, Pulse makes it easy to achieve this. On refresh the State value will magically load if present in storage.
 
 ```js

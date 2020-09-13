@@ -3,11 +3,9 @@ id: setup-with-react
 title: Setup With React
 ---
 
-# React Setup
-
 ## Installation
 
-```
+```bash npm2yarn
 npm i pulse-framework
 ```
 

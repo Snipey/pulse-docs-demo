@@ -4,9 +4,7 @@ title: Pulse Instance
 
 ## Introduction
 
-# Pulse Instance
-
-Everything you write with Pulse will use the `App` instance. which is created with `new Pulse()`. With this you can create [State](/state), [Computed State](/computed), [Collections](/collections), [APIs](/api) and more.
+Everything you write with Pulse will use the `App` instance. With this you can create [State](./state.md), [Computed State](./computed.md), [Collections](./collections.md), [APIs](./api.md) and more.
 
 The Pulse Instance is unique to your application, you only need one. It should be exported top-level and imported into core files.
 
@@ -14,12 +12,12 @@ The Pulse Instance is unique to your application, you only need one. It should b
 const App = new Pulse();
 ```
 
-The Pulse Instance provides helpful function to your application, and the way you write your [Core](/core).
+The Pulse Instance provides helpful function to your application, and the way you write your [Core](./core.md).
 
-- Queueing [State](/state) changes and preventing race conditions.
-- Providing global awareness to [Computed State](/computed) for automatic dependency tracking.
+- Queueing [State](./state.md) changes and preventing race conditions.
+- Providing global awareness to [Computed State](./computed.md) for automatic dependency tracking.
 - Intergrating with persistent storage.
-- Initializing the [Core](/core) structure.
+- Initializing the [Core](./core.md) structure.
 - Issuing squashed updates to subscribed components via the `Pulse Runtime`.
 
 ## Configuration Options
@@ -81,7 +79,7 @@ interface ErrorConfig {}
 
 ## Error Handling [WIP]
 
-Pulse offers a global error handler best suited for use with [Actions](/actions) on a try/catch and automatically used by [App.Action()](/actions).
+Pulse offers a global error handler best suited for use with [Actions](./actions.md) on a try/catch and automatically used by [App.Action()](./actions.md).
 
 ```ts
 App.onError((error: ErrorObject) => {
@@ -100,4 +98,4 @@ interface ErrorObject {
 }
 ```
 
-You can configure your [API](/api) instance to prepare response data for the error handler also. More about this on [API](/api);
+You can configure your [API](./api.md) instance to prepare response data for the error handler also. More about this on [API](./api.md);
