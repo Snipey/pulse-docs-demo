@@ -4,8 +4,6 @@ title: Events
 
 ## Introduction
 
-# Events
-
 Events are handy for emitting UI updates and passing data with them. Both core functions and components can subscribe to events.
 
 A prime example for when to use events would be showing an alert dropdown inside your app. Your core can emit the event and a top-level component can listen and render alert dropdown with a message.
