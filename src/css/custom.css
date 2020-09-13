@@ -7,13 +7,10 @@
 
 /* You can override the default Infima variables here. */
 
-@font-face {
-  font-family: dank;
-  src: url(/DankMono-Regular.ttf);
-}
+@import url(https://cdn.t.pics/dank-mono.css);
 
 :root {
-  font-family: dank;
+  font-family: dm;
   --ifm-color-primary: #ef425a;
   --ifm-color-primary-dark: #ed2641;
   --ifm-color-primary-darker: #eb1835;
