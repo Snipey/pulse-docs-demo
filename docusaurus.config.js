@@ -3,7 +3,7 @@ module.exports = {
   tagline: 'A global state and logic framework for reactive Javascript applications.',
   url: 'https://pulsejs.org',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'ignore',
   favicon: 'img/favicon.ico',
   organizationName: 'pulsejs', // Usually your GitHub org/user name.
   projectName: 'pulse-docs', // Usually your repo name.
