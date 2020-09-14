@@ -4,8 +4,6 @@ title: State
 
 ## Introduction
 
-# State
-
 State is the foundation of Pulse, most everything either _is_ State or _extends_ the functionality of State. It is used to preserve a value, while providing a toolkit to use and mutate it.
 
 State also has the ability to track its dependents and issue "reactive" side effects such as recomputing [Computed State](./computed.md) and updating React/Vue components.

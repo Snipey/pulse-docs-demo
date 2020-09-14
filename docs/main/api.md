@@ -1,7 +1,7 @@
 ---
 title: API
 ---
-:::warning Sorry!
+:::caution Sorry!
 This page is not up to standards, improvements need to be made inline with the rest of the documentation.
 :::
 ## Introduction

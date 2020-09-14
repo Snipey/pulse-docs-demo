@@ -2,7 +2,7 @@
 title: Core
 ---
 
-# Core
+## Introduction
 
 The `core` is a single object that contains all Controllers, State, Collections, actions, routes, and helpers as you define them under a Pulse instance.
 
@@ -18,7 +18,7 @@ core.posts.collection.findById(21);
 core.authentication.state.TOKEN.value;
 ```
 
-> _Arbitary examples of how the core can be used._
+> _Arbitrary examples of how the core can be used._
 
 ## Definition
 
@@ -35,22 +35,22 @@ export default App.Core(core);
 export type ICore = typeof core;
 ```
 
-Imports for `accounts` and `authentication` were ommited for this example.
+Imports for `accounts` and `authentication` were omitted for this example.
 
 The Pulse instance is created first as `App`, followed by an object that forms the root of the core object, in this case we're passing in two arbitrary Controllers.
 
 Now we register the core with `App.Core()` which snapshots the core object. It can now be accessed anywhere with the very same function, without any parameters. (See [Usage](#usage))
 
-> _In practice the initilization of App should be in a seperate file (eg: `app.ts`) as it must occur before the imports that require the `App` instance and TSLint doesn't like code above imports._
+> _In practice the initialization of App should be in a separate file (eg: `app.ts`) as it must occur before the imports that require the `App` instance and TSLint doesn't like code above imports._
 
 See [Creating your core](#core) for the more detailed structure.
 
 :::tip Why export the type?
 We're unable to directly import the core into controllers, as it would create cyclic dependencies which can cause horrible compile issues, especially at scale. This is why we use `App.Core()` to get the core inside controllers, but it still wouldn't be type safe.
 
-However, Typescript types are immune to this paradox and can time travel. :crystal_ball: Once you declare them, they are able to be refrenced in code before and after declaration. This means we can import just the type of the finalized core into our individual controllers.
+However, Typescript types are immune to this paradox and can time travel. :crystal_ball: Once you declare them, they are able to be referenced in code before and after declaration. This means we can import just the type of the finalized core into our individual controllers.
 
-Now when making changes to one Controller you'll see full intelisense in the other—regardless of the order the controllers are initialized.
+Now when making changes to one Controller you'll see full intellisense in the other—regardless of the order the controllers are initialized.
 :::
 
 ## Usage
@@ -84,7 +84,7 @@ It's safe to use the default import here as we know everything has been initiali
 
 You can not access a `controller` via your core from within that **same controller folder**. So `core.accounts` can not be used in files in the `account` controller folder, but it can see all other controllers. You'll need to use direct imports to use State, Collections and actions etc. from the same controller.
 
-#### 2) Destructuing imports
+#### 2) Destructuring imports
 
 In an ideal world we'd be able to do this:
 
@@ -94,7 +94,7 @@ const { accounts } = App.Core<ICore>();
 
 This would not work because at import-level accounts has not been defined yet, as assembly of the core happens last.
 
-However if you import **without** destructuing, the constant you assign will be a direct refrence to the core object within the App instance. So at runtime it will work.
+However if you import **without** destructuring, the constant you assign will be a direct reference to the core object within the App instance. So at runtime it will work.
 
 ```ts
 const core = App.Core<ICore>();
@@ -109,7 +109,7 @@ const core = App.Core<ICore>();
 // Imagine this is a "posts" controller, or anything but accounts
 const state = {
   noworks: App.State(core.accounts), // compile error
-  works: App.Computed(() => {		   // no complile error
+  works: App.Computed(() => {		   // no compile error
     core.accounts
   }),
 },
@@ -124,7 +124,7 @@ Refer to the `examples/react-typescript/src/core` directory on the Pulse repo fo
 Create a folder in your application named **_core_**.
 
 :::tip Tip: Using an external core
-In some cases you might want to create your core in a seperate repo or monorepo if you wish to use the same core in multiple projects.
+In some cases you might want to create your core in a separate repo or monorepo if you wish to use the same core in multiple projects.
 :::
 
 ### New File: `app.ts`
@@ -151,7 +151,7 @@ By this point your core should look something like this:
 
 ### New Directory: `controllers`
 
-Create a folder for your conrollers. Pulse advocates splitting up your core into modules using the [Controller](/controller) class to containerize the module. However this step is optional, you're free to structure your core however you'd like.
+Create a folder for your controllers. Pulse advocates splitting up your core into modules using the [Controller](/controller) class to containerize the module. However this step is optional, you're free to structure your core however you'd like.
 
 > See [Controller](/controller) documentation for more detail
 

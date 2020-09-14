@@ -2,8 +2,6 @@
 title: Setup With Next
 ---
 
-# NextJS Setup
-
 NextJS is a web framework for React. [Learn more.](https://nextjs.org/)
 
 ## Installation
@@ -18,10 +16,14 @@ import TabItem from '@theme/TabItem';
     {label: 'Yarn', value: 'yarn'},
   ]}>
   <TabItem value="npm">
+
     npm i --save @pulsejs/core @pulsejs/react @pulsejs/next
+	
   </TabItem>
   <TabItem value="yarn">
+
     yarn add @pulsejs/core @pulsejs/react @pulsejs/next
+
   </TabItem>
 </Tabs>
 

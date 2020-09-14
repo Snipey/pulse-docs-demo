@@ -1,0 +1,80 @@
+/* stylelint-disable docusaurus/copyright-header */
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+
+@import url(https://cdn.t.pics/dank-mono.css);
+
+:root {
+  font-family: dm;
+  --ifm-color-primary: #ef425a;
+  --ifm-color-primary-dark: #ed2641;
+  --ifm-color-primary-darker: #eb1835;
+  --ifm-color-primary-darkest: #c5112a;
+  --ifm-color-primary-light: #f15e73;
+  --ifm-color-primary-lighter: #f36c7f;
+  --ifm-color-primary-lightest: #f696a4;
+  --ifm-code-font-size: 95%;
+}
+
+.alert--success {
+  --ifm-color-success: #f3f5f7 !important;
+  border-left-width: .5rem;
+  border-left-style: solid; 
+  border-left-color: #42b983;
+  border-radius: 2px !important;
+  color: #000000;
+  a {
+    color: #ef425a
+  }
+}
+.alert--warning {
+  --ifm-color-warning: #ffffda !important;
+  --ifm-alert-border-color: rgba(255,229,100,0);
+  border-left-width: .5rem;
+  border-left-style: solid; 
+  border-left-color: #e7c000;
+  border-radius: 2px !important;
+  color: #000000;
+  a {
+    color: #ef425a
+  }
+}
+.alert--info {
+  --ifm-color-info: #f3f5f7 !important;
+  --ifm-alert-border-color: rgba(255,229,100,0);
+  border-left-width: .5rem;
+  border-left-style: solid; 
+  border-left-color: #54c7ec;
+  border-radius: 2px !important;
+  color: #000000;
+  a {
+    color: #ef425a
+  }
+}
+.alert--danger {
+  --ifm-color-danger: #f3f5f7 !important;
+  --ifm-alert-border-color: rgba(255,229,100,0);
+  border-left-width: .5rem;
+  border-left-style: solid; 
+  border-left-color: #54c7ec;
+  border-radius: 2px !important;
+  color: #000000;
+  a {
+    color: #ef425a
+  }
+}
+
+.admonition-icon svg {
+  --ra-admonition-icon-color: #000000;
+}
+.docusaurus-highlight-code-line {
+  background-color: rgb(72, 77, 91);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}

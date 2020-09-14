@@ -15,10 +15,14 @@ import TabItem from '@theme/TabItem';
     {label: 'Yarn', value: 'yarn'},
   ]}>
   <TabItem value="npm">
+
     npm i --save @pulsejs/core @pulsejs/react
+
   </TabItem>
   <TabItem value="yarn">
+
     yarn add @pulsejs/core @pulsejs/react
+
   </TabItem>
 </Tabs>
 

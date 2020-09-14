@@ -7,6 +7,7 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'pulsejs', // Usually your GitHub org/user name.
   projectName: 'pulse-docs', // Usually your repo name.
+  plugins: ['docusaurus-plugin-sass'],
   themeConfig: {
     navbar: {
       title: 'PulseJS',
@@ -83,7 +84,7 @@ module.exports = {
             'https://github.com/pulse-framework/pulse-docs/edit/master/blog/',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve('./src/css/custom.scss'),
         },
       },
     ],

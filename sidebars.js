@@ -31,7 +31,6 @@ module.exports = {
         'main/events',
         'main/persisting-data',
         'main/pulse-instance',
-        'main/ssr',
         'main/state'
       ],
     },
