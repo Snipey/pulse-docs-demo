@@ -144,7 +144,7 @@ MyCollection.groups.MY_GROUP.build(); // void
 
 ## Selectors
 
-Selectors allow you to _select_ a data item from a Collection. Components that need one piece of data such as a "current account" or maybe "current viewing post" would benifit from using Selectors.
+Selectors allow you to _select_ a data item from a Collection. Components that need one piece of data such as a "current account" or maybe "current viewing post" would benefit from using Selectors.
 
 ```js
 const MyCollection = App.Collection<DataType>()(collection => ({
@@ -165,7 +165,7 @@ MyCollection.selectors.MY_SELECTOR.value; // cached selected Collection data
 MyCollection.selectors.MY_SELECTOR.select(1); // select a new primary key
 ```
 
-Selectors are smart, if you select a primary key that doesn't exist in your Collection yet, the Selector will return an empty object. However once the data is collected under that primary key, the Selector will update seemlessly.
+Selectors are smart, if you select a primary key that doesn't exist in your Collection yet, the Selector will return an empty object. However once the data is collected under that primary key, the Selector will update seamlessly.
 
 ## Selector Methods
 

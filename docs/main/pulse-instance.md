@@ -16,7 +16,7 @@ The Pulse Instance provides helpful function to your application, and the way yo
 
 - Queueing [State](./state.md) changes and preventing race conditions.
 - Providing global awareness to [Computed State](./computed.md) for automatic dependency tracking.
-- Intergrating with persistent storage.
+- Integrating with persistent storage.
 - Initializing the [Core](./core.md) structure.
 - Issuing squashed updates to subscribed components via the `Pulse Runtime`.
 
@@ -33,7 +33,7 @@ const App = new Pulse({
 });
 ```
 
-> Here's a Typescript interface for quick refrence, however each property will be explained in more detail below.
+> Here's a Typescript interface for quick reference, however each property will be explained in more detail below.
 
 ```ts
 interface PulseConfig {
@@ -45,7 +45,7 @@ interface PulseConfig {
 }
 ```
 
-## Options Refrence
+## Options Reference
 
 ### `storage`
 

@@ -13,7 +13,8 @@ module.exports = {
       items: [
         'getting-started/concepts',
         'getting-started/setup-with-react',
-        'getting-started/setup-with-vue'
+        'getting-started/setup-with-vue',
+        'getting-started/setup-with-next'
       ],
     },
     {

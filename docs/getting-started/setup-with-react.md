@@ -5,20 +5,34 @@ title: Setup With React
 
 ## Installation
 
-```bash npm2yarn
-npm i pulse-framework
-```
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs
+  defaultValue="yarn"
+  values={[
+    {label: 'NPM', value: 'npm'},
+    {label: 'Yarn', value: 'yarn'},
+  ]}>
+  <TabItem value="npm">
+    npm i --save @pulsejs/core @pulsejs/react
+  </TabItem>
+  <TabItem value="yarn">
+    yarn add @pulsejs/core @pulsejs/react
+  </TabItem>
+</Tabs>
+
+Think of `@pulsejs/react` as an extension of Pulse in the context of React. It provides access to all core functions + React only helpers such as the `usePulse` hook. We can't forget to install the `@pulsejs/core` as it is used by the React integration.
 
 ## Initialization
 
-```ts
-import Pulse from 'pulse-framework';
-import React from 'react';
+```js
+import Pulse from '@pulsejs/react';
 
-export const App = new Pulse({
-    framework: React;
-})
+export const App = new Pulse();
 ```
+
+Unlike older versions you do not need to pass React into Pulse, as the React package lists React as a peer dependency. This allows for a much cleaner syntax for setup!
 
 Follow this **guide** to learn how to set up your core
 
@@ -32,7 +46,7 @@ const myStateValue = usePulse(core.MY_STATE);
 
 > Both the input and the return value are an array, allowing you to subscribe to more than one State.
 
-It also supports extensions of [State](../main/state.md), such as [Computed](../main/computed.md), Groups, Selectors and even Collection Data, meaning you can also use functions that return State, such as `Collection.findById()`
+It also supports extensions of [State](../main/state.md), such as [Computed](../main/computed.md), Groups, Selectors and even [Collection Data](../main/collections.md), meaning you can also use functions that return State, such as `Collection.findById()`
 
 :::tip NOTE: usePulse returns the value, not the instance.
 The return value is `State.value`, not the State instance. For Groups it's slightly different, you'll get the `Group.output`, which is the useful data for your component.
@@ -63,7 +77,7 @@ const [myState, anotherState] = usePulse([core.MY_STATE, core.ANOTHER_STATE]);
 
 ## Class Components: `PulseHOC()`
 :::caution
-PulseHOC is a low priority WIP and has not been tested at the time of writing these docs, if you need this and it doesn't work, please let me know via Discord
+PulseHOC is a low priority WIP and has not been tested at the time of writing these docs, if you need this and it doesn't work, please let me know via [Discord](https://discord.gg/WYUDQq)
 :::
 
 ```js

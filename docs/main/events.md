@@ -86,4 +86,4 @@ const events = App.EventGroup(Event => ({
 }));
 ```
 ## Importing Events
-It's best practice to export your Events in your [core](/core) object, so they can easily be used within your components.
+It's best practice to export your Events in your [core](./core.md) object, so they can easily be used within your components.
