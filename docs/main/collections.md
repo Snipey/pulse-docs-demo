@@ -37,7 +37,7 @@ const MyCollection = App.Collection<DataType>()();
 ### With a Typescript interface
 
 ```ts
-// This interface describes an arbitary data item
+// This interface describes an arbitrary data item
 interface DataType {
   id: number;
   message: string;

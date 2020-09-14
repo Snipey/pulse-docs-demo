@@ -142,9 +142,11 @@ export const App = new Pulse({
 
 By this point your core should look something like this:
 :::info
+```
 ├── **core**
 │ ├── **index.ts**
 │ ├── `app.ts`
+```
 :::
 
 > Leave index.ts empty for now.
@@ -206,7 +208,8 @@ export default core;
 
 Pulse is flexible, so you are free to do you own thing, but you must ensure that at the very least instance creation comes first, core construction comes last.
 
-:::info
+:::info This is the structure of a PulseJS App
+```
 **core**
 ├── .**index.ts**
 ├── .**app.ts** _Create Pulse instance_
@@ -226,4 +229,5 @@ Pulse is flexible, so you are free to do you own thing, but you must ensure that
 │ ├── `data` _(Optional)_
 │ │ ├── **lists.json**
 └── .**core.ts** _Construct the core_
+```
 :::
