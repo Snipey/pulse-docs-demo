@@ -6,7 +6,7 @@ title: Controllers
 
 The Controller function creates a type safe container for sections of your `core`.
 
-These sections give structure to your application. For example, you would want to seperate `accounts` logic, from `posts` logic. Controllers are the perfect tool for this.
+These sections give structure to your application. For example, you would want to separate `accounts` logic, from `posts` logic. Controllers are the perfect tool for this.
 
 > In this example, the Controller we are accessing is called `accounts`
 
