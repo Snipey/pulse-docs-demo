@@ -6,7 +6,7 @@ title: Actions
 
 # Actions
 
-Actions are functions, sometimes literally just functions. However there are some added benifits to using Pulse Actions.
+Actions are functions, sometimes literally just functions. However there are some added benefits to using Pulse Actions.
 
 :::tip Where do I put them?
 Actions are best inside an `actions.ts` file in a **Controller** directory, exported individually.

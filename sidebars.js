@@ -19,7 +19,7 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'Main',
+      label: 'Documentation',
       collapsed: true,
       items: [
         'main/actions',
